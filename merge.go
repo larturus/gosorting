@@ -1,9 +1,9 @@
 // This package implements a number of sorting algorithms
-package demosort
+package gosort
 
 func merge(left []int, right []int) []int {
 	var result []int
-	var i,j int
+	var i, j int
 
 	for i < len(left) && j < len(right) {
 		if left[i] <= right[j] {
@@ -26,6 +26,7 @@ func merge(left []int, right []int) []int {
 	return result
 }
 
+// Implements the merge sort algorithm
 func MergeSort(values []int) []int {
 	valuesLenght := len(values)
 	if valuesLenght <= 1 {
